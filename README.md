@@ -93,7 +93,7 @@ running `npm install`.
 
 ## Author and licensing
 Developed by [Zandrex Camagon](http://zandrexrc.me). 
-Licensed under [MIT License](http://example.com/).
+Licensed under [MIT License](https://github.com/zandrexrc/kanbanboard/blob/master/LICENSE).
 
 
 [painting]: https://commons.wikimedia.org/wiki/File:Clevelandart_1953.155.jpg
