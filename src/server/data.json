@@ -1,0 +1,64 @@
+[
+  {
+    "id": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d",
+    "name": "Main",
+    "color": "#03a9f4",
+    "tags": [
+      "tag 1",
+      "tag 2"
+    ],
+    "cards": [
+      {
+        "id": "1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed",
+        "content": "Card #1",
+        "status": "Todo",
+        "tags": [
+          "tag 1",
+          "tag 2"
+        ]
+      },
+      {
+        "id": "1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bee",
+        "content": "Card #2",
+        "status": "Doing",
+        "tags": [
+          "tag 1"
+        ]
+      },
+      {
+        "id": "1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+        "content": "Card #3",
+        "status": "Done",
+        "tags": [
+          "tag 2"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6e",
+    "name": "Board 2",
+    "color": "#607d8b",
+    "tags": [],
+    "cards": [
+      {
+        "id": "1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bea",
+        "content": "Never gonna give you up",
+        "status": "Todo",
+        "tags": []
+      },
+      {
+        "id": "1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4beb",
+        "content": "Never gonna let you down",
+        "status": "Doing",
+        "tags": []
+      },
+      {
+        "id": "1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bec",
+        "content": "Never gonna turn around and desert you",
+        "status": "Done",
+        "tags": []
+      }
+    ]
+  }
+]

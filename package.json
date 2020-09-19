@@ -1,0 +1,68 @@
+{
+  "name": "kanbanboard",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "latest",
+    "@material-ui/icons": "latest",
+    "@material-ui/lab": "latest",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "@types/jest": "^24.0.25",
+    "@types/node": "^12.12.22",
+    "@types/react": "^16.9.17",
+    "@types/react-color": "latest",
+    "@types/react-dom": "^16.9.4",
+    "@types/react-redux": "^7.1.5",
+    "@types/react-custom-scrollbars": "latest",
+    "@types/redux-logger": "latest",
+    "@types/uuid": "latest",
+    "body-parser": "^1.19.0",
+    "clsx": "latest",
+    "cross-fetch": "latest",
+    "express": "^4.17.1",
+    "moment": "latest",
+    "prop-types": "latest",
+    "react": "^16.13.1",
+    "react-color": "latest",
+    "react-dnd": "^11.1.3",
+    "react-dnd-html5-backend": "^11.1.3",
+    "react-dom": "^16.13.1",
+    "react-redux": "latest",
+    "react-scripts": "^3.4.3",
+    "react-custom-scrollbars": "latest",
+    "redux-logger": "latest",
+    "redux-thunk": "latest",
+    "typescript": "latest",
+    "uuid": "latest"
+  },
+  "scripts": {
+    "start": "npm-run-all --parallel start:server start:web",
+    "start:server": "nodemon --watch src/server src/server/index.js",
+    "start:web": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:8080",
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "devDependencies": {
+    "nodemon": "latest",
+    "npm-run-all": "latest"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
