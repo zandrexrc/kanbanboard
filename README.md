@@ -1,79 +1,16 @@
 # Kanbanboard
 Check out the live demo version [here](https://kanbanboard-zandrexrc.netlify.app)!
 
-**This branch is dedicated for packaging our web app into an Electron app.**   
-[Read here](#running-the-electron-app)
+You can also run it as an Electron app! [Read more here.](#running-the-electron-app)
 
+- [Features](#features)
 - [Requirements](#requirements)
 - [Installation guide](#installation-guide)
 - [Setting up React development server](#setting-up-react-development-server)
 - [Running the Electron app](#running-the-electron-app)
 - [Packaging the electron app](#packaging-the-electron-app)
 - [Uninstallation guide](#uninstallation-guide)
-- [Features](#features)
 - [Author and licensing](#author-and-licensing)
-
-
-## Requirements
-- NodeJS
-
-
-## Installation guide
-1. Download or clone the repo.
-
-2. Navigate to the root directory of the app and install all dependencies: 
-```
-npm install
-```
-> You may need to fix some vulnerabilites. Run *npm audit fix* to fix them.
-
-3. Build the React app:
-```
-npm run build
-```
-
-4. Start the server: 
-```
-npm start
-```
-> The server runs on port 8080 by default. To change it, modify the 
-> **SERVER_PORT** value in the *.env* file. You'll also need to update the 
-> **proxy** settings in *package.json* to match the new port.
-
-5. Open *localhost:8080* in a browser.
-> If you changed the port, use your port number instead of 8080.
-
-
-## Setting up React development server
-If you want to modify the React source files, you may want set up the CRA 
-development environment:
-```
-npm run start:dev
-```
-By default, the React server runs on port 3000. To change it, open the *.env* 
-file and change **PORT** to your desired port number.
-   
-Remember to run `npm run build` to rebuild your app after you're done developing.
-
-
-## Running the Electron app
-```
-npm run start:electron
-```
-
-
-## Packaging the Electron app
-```
-npm run package
-```
-This will create a new directory called *kanbanboard-<your_OS>* that contains 
-an executable program (.exe/.app, depending on your OS).
-
-
-## Uninstallation guide
-1. Just delete the root folder of the app :)
-> The packaged Electron app is not installed on your device, so it's safe to 
-> just delete the folder :)
 
 
 ## Features
@@ -107,12 +44,58 @@ corner of the taskbar and choose the filtering tag.
 
 ### Saving your data
 Click on the save button located in the upper right corner of the taskbar to
-save the current state of your cards and boards.
-- The data is saved in a local file named `data.json`, which is located in the 
-*src/server* directory.
+save the current state of your cards and boards. 
+(The data is saved in *data/data.json*.)
 
-> If you exit or refresh the app without saving, all of the changes you made 
-> will be lost!
+**If you exit or refresh the app without saving, all of the changes you made** 
+**will be lost!**
+
+
+## Installation guide
+
+**Requirements**
+- Node.js, npm
+   
+1. Download or clone the repo.
+
+2. Navigate to the root directory of the app and install all dependencies: 
+```
+npm install
+```
+> You may need to fix some vulnerabilities. Run `npm audit fix` to fix them.
+
+3. Build the React app:
+```
+npm run build
+```
+
+4. Start the server: 
+```
+npm start
+```
+> The server runs on port 8080 by default. To change it, modify the 
+> **SERVER_PORT** value in the *.env* file. You'll also need to update the 
+> **proxy** settings in *package.json* to match the new port.
+
+5. Open *localhost:8080* in a browser.
+> If you changed the port, use your port number instead of 8080.
+
+
+## Setting up React development server
+If you want to modify the React source files, you may want set up the CRA 
+development environment:
+```
+npm run start:dev
+```
+By default, the React server runs on port 3000. To change it, open the *.env* 
+file and change **PORT** to your desired port number.
+   
+Remember to run `npm run build` to rebuild your app after you're done developing.
+
+### Enabling Redux Logger
+When an action is dispatched, Redux Logger prints the previous and current state 
+on the console. To enable this feature, go to *src/redux/store.ts* and set 
+**loggerIsActive** to *true*.
 
 ### Customizing the background images
 Upload the images you want to use in the *public* folder.
@@ -125,6 +108,26 @@ background image.
 `makeStyles` function.
     - The default image used is [Spring Flowers (1864)][painting] by 
     [Claude Monet][artist]
+
+
+## Running the Electron app
+```
+npm run start:electron
+```
+
+
+## Packaging the Electron app
+```
+npm run package
+```
+This will create a new directory called *kanbanboard-<your_OS>* that contains 
+an executable program (.exe/.app, depending on your OS).
+
+
+## Uninstallation guide
+1. Just delete the root folder of the app :)
+> The packaged Electron app is not installed on your device, so it's safe to 
+> just delete the folder :)
 
 
 ## Author and licensing
