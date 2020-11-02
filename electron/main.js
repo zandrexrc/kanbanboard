@@ -41,4 +41,4 @@ app.on('window-all-closed', function () {
 })
 
 // Start Express app
-const server = require(path.join(__dirname, "app"));
+const server = require(path.join(__dirname, "../server", "index"));
