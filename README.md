@@ -1,11 +1,80 @@
 # Kanbanboard
 Check out the live demo version [here](https://kanbanboard-zandrexrc.netlify.app)!
 
-- [Features](#features)
+**This branch is dedicated for packaging our web app into an Electron app.**   
+[Read here](#running-the-electron-app)
+
 - [Requirements](#requirements)
 - [Installation guide](#installation-guide)
+- [Setting up React development server](#setting-up-react-development-server)
+- [Running the Electron app](#running-the-electron-app)
+- [Packaging the electron app](#packaging-the-electron-app)
 - [Uninstallation guide](#uninstallation-guide)
+- [Features](#features)
 - [Author and licensing](#author-and-licensing)
+
+
+## Requirements
+- NodeJS
+
+
+## Installation guide
+1. Download or clone the repo.
+
+2. Navigate to the root directory of the app and install all dependencies: 
+```
+npm install
+```
+> You may need to fix some vulnerabilites. Run *npm audit fix* to fix them.
+
+3. Build the React app:
+```
+npm run build
+```
+
+4. Start the server: 
+```
+npm start
+```
+> The server runs on port 8080 by default. To change it, modify the 
+> **SERVER_PORT** value in the *.env* file. You'll also need to update the 
+> **proxy** settings in *package.json* to match the new port.
+
+5. Open *localhost:8080* in a browser.
+> If you changed the port, use your port number instead of 8080.
+
+
+## Setting up React development server
+If you want to modify the React source files, you may want set up the CRA 
+development environment:
+```
+npm run start:dev
+```
+By default, the React server runs on port 3000. To change it, open the *.env* 
+file and change **PORT** to your desired port number.
+   
+Remember to run `npm run build` to rebuild your app after you're done developing.
+
+
+## Running the Electron app
+```
+npm run start:electron
+```
+
+
+## Packaging the Electron app
+```
+npm run package
+```
+This will create a new directory called *kanbanboard-<your_OS>* that contains 
+an executable program (.exe/.app, depending on your OS).
+
+
+## Uninstallation guide
+1. Just delete the root folder of the app :)
+> The packaged Electron app is not installed on your device, so it's safe to 
+> just delete the folder :)
+
 
 ## Features
 
@@ -56,39 +125,6 @@ background image.
 `makeStyles` function.
     - The default image used is [Spring Flowers (1864)][painting] by 
     [Claude Monet][artist]
-
-
-## Requirements
-- NodeJS
-
-
-## Installation guide
-1. Download or clone the repo.
-
-2. Change the server port in *src/server/index.js* to one that is not currently 
-in use:
-```javascript
-...
-const port = 8080;
-...
-```
-
-3. Change the proxy in *packages.json* located in the root directory of the app 
-to match your host and port:
-```javascript
-...
-"proxy": "http://localhost:8080",
-...
-```
-
-4. Navigate to the root directory of the app and install all dependencies by 
-running `npm install`.
-
-5. Run the app with `npm start`.
-
-
-## Uninstallation guide
-1. Just delete the root folder of the app :)
 
 
 ## Author and licensing

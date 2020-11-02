@@ -2,6 +2,7 @@ const bodyParser = require("body-parser");
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
+require("dotenv").config();
 
 
 // Set up express app
@@ -32,5 +33,5 @@ app.post("/data", function(req, res) {
 
 
 // Start listening
-const port = 8080;
+const port = process.env.SERVER_PORT || 8080;
 app.listen(port, () => {console.log(`Server listening to port ${port}`)});
