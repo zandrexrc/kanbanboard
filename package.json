@@ -37,9 +37,14 @@
     "typescript": "latest",
     "uuid": "latest"
   },
+  "devDependencies": {
+    "nodemon": "latest",
+    "npm-run-all": "latest"
+  },
   "scripts": {
-    "start": "npm-run-all --parallel start:server start:web",
-    "start:server": "nodemon --watch src/server src/server/index.js",
+    "start": "node server/index.js",
+    "start:dev": "npm-run-all --parallel start:server start:web",
+    "start:server": "nodemon --watch server server/index.js",
     "start:web": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -48,10 +53,6 @@
   "proxy": "http://localhost:8080",
   "eslintConfig": {
     "extends": "react-app"
-  },
-  "devDependencies": {
-    "nodemon": "latest",
-    "npm-run-all": "latest"
   },
   "browserslist": {
     "production": [

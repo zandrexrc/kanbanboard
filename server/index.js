@@ -6,14 +6,18 @@ const path = require("path");
 
 // Set up express app
 const app = express();
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(path.join(__dirname, '../build')));
 app.use(bodyParser.urlencoded({"extended":"true"}));
 app.use(bodyParser.json());
 app.use(bodyParser.json({type: 'application/vnd.api+json'}));
 
 
 // Endpoints
-const filepath = path.resolve(__dirname, "./data.json");
+const filepath = path.resolve(__dirname, "../data", "data.json");
+
+app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, '../build', 'index.html'));
+});
 
 app.get("/data", function(req, res) {
     const data = JSON.parse(fs.readFileSync(filepath, "utf8"));
